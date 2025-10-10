@@ -24,9 +24,9 @@ Todo el sistema funciona **con almacenamiento en memoria**, usando una lista de 
 
 ## ⚙️ Tecnologías Utilizadas
 
-- **Python 3.x**  
-- **Django 5.x**  
-- **HTML5 / CSS3 / Bootstrap 5**  
+- **Python 3.12.2**  
+- **Django 5.2.7**  
+- **HTML5 / CSS3 / Bootstrap 5.3.0**  
 - **Django Templates**  
 - **Django Forms**  
 - **Sistema de Autenticación de Django (django.contrib.auth)**
@@ -67,7 +67,7 @@ Luego, abre en tu navegador:
 
 ## 🧱 Estructura del Proyecto
 
-```
+``` bash
 Evaluacion_Modulo6/
 │
 ├── db.sqlite3 # Base de datos local (generada por Django)
@@ -107,7 +107,7 @@ Evaluacion_Modulo6/
 │ └── lista_tareas.html
 │
 └── pycache/ # Archivos compilados por Python
-
+```
 ---
 
 ## 🧩 Funcionalidades por Parte
