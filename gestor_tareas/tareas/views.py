@@ -31,6 +31,8 @@ def agregar_tarea(request):
 # Vista para eliminar una tarea
 @login_required
 def eliminar_tarea(request, tarea_id):
-    if tarea_id < len(tareas):
+    tarea = tareas[tarea_id]
+    if request.method == 'POST':
         del tareas[tarea_id]
-    return redirect('lista_tareas')
+        return redirect('lista_tareas')
+    return render(request, 'tareas/eliminar_tarea.html', {'tarea': tarea})

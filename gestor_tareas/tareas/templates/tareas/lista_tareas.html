@@ -1,0 +1,21 @@
+<!-- templates/tareas/lista_tareas.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Lista de Tareas</h1>
+    <a href="{% url 'agregar_tarea' %}" class="btn btn-primary mb-3">Agregar Tarea</a>
+    {% if tareas %}
+    <ul class="list-group">
+        {% for tarea in tareas %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{% url 'detalle_tarea' forloop.counter0 %}" class="text-decoration-none">{{ tarea.titulo }}</a>
+            <a href="{% url 'eliminar_tarea' forloop.counter0 %}" class="btn btn-danger btn-sm">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <div class="alert alert-info">No hay tareas registradas.</div>
+    {% endif %}
+</div>
+{% endblock %}

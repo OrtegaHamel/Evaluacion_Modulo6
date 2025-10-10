@@ -45,7 +45,7 @@ ROOT_URLCONF = 'gestor_tareas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'tareas', 'templates'),],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,6 +88,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Redirect URLs para login y logout
+LOGIN_REDIRECT_URL = '/tareas/'  # Redirige después de iniciar sesión
+LOGOUT_REDIRECT_URL = '/accounts/login/'  # Redirige después de cerrar sesión
 
 
 # Internationalization

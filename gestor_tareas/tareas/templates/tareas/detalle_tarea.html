@@ -1,0 +1,15 @@
+<!-- templates/tareas/detalle_tarea.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Detalle de Tarea</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ tarea.titulo }}</h5>
+            <p class="card-text">{{ tarea.descripcion }}</p>
+            <a href="{% url 'lista_tareas' %}" class="btn btn-secondary">Volver a la lista</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
